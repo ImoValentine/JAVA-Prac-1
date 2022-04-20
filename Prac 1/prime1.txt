@@ -1,0 +1,33 @@
+import java.util.*;
+class prime1
+{
+   public static void main (String[] args)
+   {		
+      
+       int j, status = 1, num = 3;
+       Scanner in = new Scanner(System.in);
+       System.out.println("Enter the number to find the prime numbers below it");
+       int i= in.nextInt();
+       //Empty String
+       String  primeNumbers = "";
+
+       for (j = 1; j <= i; j++)         
+       { 		  	  
+          int counter=0; 	  
+          for(num =j; num>=1; num--)
+	  {
+             if(j%num==0)
+	     {
+ 		counter = counter + 1;
+	     }
+	  }
+	  if (counter ==2)
+	  {
+	     //Appended the Prime number to the String
+	     primeNumbers = primeNumbers + j + " ";
+	  }	
+       }	
+       System.out.println("Prime numbers are :");
+       System.out.println(primeNumbers);
+   }
+}
